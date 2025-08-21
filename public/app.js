@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const galleryImage = document.getElementById('gallery-image');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
+        const prevBtnImage = document.getElementById('prev-btn-image');
+        const nextBtnImage = document.getElementById('next-btn-image');
         const imageCounter = document.getElementById('image-counter');
         
         // Workshop photos - using actual workshop images
@@ -133,9 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryImage.alt = image.alt;
             imageCounter.textContent = `${currentImageIndex + 1} / ${workshopImages.length}`;
             
-            // Update button states
-            prevBtn.disabled = currentImageIndex === 0;
-            nextBtn.disabled = currentImageIndex === workshopImages.length - 1;
+            // Update button states for both sets of buttons
+            const isFirst = currentImageIndex === 0;
+            const isLast = currentImageIndex === workshopImages.length - 1;
+            
+            prevBtn.disabled = isFirst;
+            nextBtn.disabled = isLast;
+            prevBtnImage.disabled = isFirst;
+            nextBtnImage.disabled = isLast;
         };
         
         const nextImage = () => {
@@ -152,9 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
         
-        // Add event listeners
+        // Add event listeners for both sets of buttons
         nextBtn.addEventListener('click', nextImage);
         prevBtn.addEventListener('click', prevImage);
+        nextBtnImage.addEventListener('click', nextImage);
+        prevBtnImage.addEventListener('click', prevImage);
         
         // Initialize gallery
         updateImage();
