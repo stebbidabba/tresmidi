@@ -39,16 +39,30 @@
         <section class="workshop-gallery-section content-section">
             <div class="container">
                 <h2>Verkstæðið Okkar</h2>
-                <div class="gallery-container">
-                    <div class="gallery-image-container">
-                        <img id="gallery-image" src="./verk1.jpeg" alt="Verkstæði mynd" loading="lazy">
-                        <button id="prev-btn-image" class="gallery-image-nav prev" aria-label="Fyrri mynd">‹</button>
-                        <button id="next-btn-image" class="gallery-image-nav next" aria-label="Næsta mynd">›</button>
+                <div class="card-gallery-container">
+                    <div class="card-stack">
+                        <div class="card active" data-index="0">
+                            <img src="./verk1.jpeg" alt="Verkstæði mynd 1" loading="lazy">
+                        </div>
+                        <div class="card" data-index="1">
+                            <img src="./verk2.jpeg" alt="Verkstæði mynd 2" loading="lazy">
+                        </div>
+                        <div class="card" data-index="2">
+                            <img src="./verk3.jpeg" alt="Verkstæði mynd 3" loading="lazy">
+                        </div>
+                        <div class="card" data-index="3">
+                            <img src="./verk4.jpeg" alt="Verkstæði mynd 4" loading="lazy">
+                        </div>
+                        <div class="card" data-index="4">
+                            <img src="./verk5.jpeg" alt="Verkstæði mynd 5" loading="lazy">
+                        </div>
+                        <div class="card" data-index="5">
+                            <img src="./verk6.jpeg" alt="Verkstæði mynd 6" loading="lazy">
+                        </div>
                     </div>
-                    <div class="gallery-navigation">
-                        <button id="prev-btn" class="gallery-btn" aria-label="Fyrri mynd">← Fyrri</button>
-                        <span id="image-counter" class="image-counter">1 / 6</span>
-                        <button id="next-btn" class="gallery-btn" aria-label="Næsta mynd">Næsta →</button>
+                    <div class="card-navigation">
+                        <span id="card-counter" class="card-counter">1 / 6</span>
+                        <p class="card-instruction">Smelltu á myndina til að skipta yfir í næstu</p>
                     </div>
                 </div>
                 

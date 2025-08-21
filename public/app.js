@@ -89,84 +89,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Workshop Photo Gallery
-    const workshopGallery = document.querySelector('.workshop-gallery-section .gallery-container');
-    if (workshopGallery) {
-        const galleryImage = document.getElementById('gallery-image');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const prevBtnImage = document.getElementById('prev-btn-image');
-        const nextBtnImage = document.getElementById('next-btn-image');
-        const imageCounter = document.getElementById('image-counter');
+    // Card Gallery
+    const cardGallery = document.querySelector('.card-gallery-container');
+    if (cardGallery) {
+        const cards = document.querySelectorAll('.card');
+        const cardCounter = document.getElementById('card-counter');
+        let currentCardIndex = 0;
         
-        // Workshop photos - using actual workshop images
-        const workshopImages = [
-            {
-                src: './verk1.jpeg',
-                alt: 'Verkstæði mynd 1'
-            },
-            {
-                src: './verk2.jpeg',
-                alt: 'Verkstæði mynd 2'
-            },
-            {
-                src: './verk3.jpeg',
-                alt: 'Verkstæði mynd 3'
-            },
-            {
-                src: './verk4.jpeg',
-                alt: 'Verkstæði mynd 4'
-            },
-            {
-                src: './verk5.jpeg',
-                alt: 'Verkstæði mynd 5'
-            },
-            {
-                src: './verk6.jpeg',
-                alt: 'Verkstæði mynd 6'
-            }
-        ];
-        
-        let currentImageIndex = 0;
-        
-        const updateImage = () => {
-            const image = workshopImages[currentImageIndex];
-            galleryImage.src = image.src;
-            galleryImage.alt = image.alt;
-            imageCounter.textContent = `${currentImageIndex + 1} / ${workshopImages.length}`;
+        const updateCard = () => {
+            // Remove active class from all cards
+            cards.forEach(card => card.classList.remove('active'));
             
-            // Update button states for both sets of buttons
-            const isFirst = currentImageIndex === 0;
-            const isLast = currentImageIndex === workshopImages.length - 1;
+            // Add active class to current card
+            cards[currentCardIndex].classList.add('active');
             
-            prevBtn.disabled = isFirst;
-            nextBtn.disabled = isLast;
-            prevBtnImage.disabled = isFirst;
-            nextBtnImage.disabled = isLast;
+            // Update counter
+            cardCounter.textContent = `${currentCardIndex + 1} / ${cards.length}`;
         };
         
-        const nextImage = () => {
-            if (currentImageIndex < workshopImages.length - 1) {
-                currentImageIndex++;
-                updateImage();
-            }
+        const nextCard = () => {
+            currentCardIndex = (currentCardIndex + 1) % cards.length;
+            updateCard();
         };
         
-        const prevImage = () => {
-            if (currentImageIndex > 0) {
-                currentImageIndex--;
-                updateImage();
-            }
-        };
-        
-        // Add event listeners for both sets of buttons
-        nextBtn.addEventListener('click', nextImage);
-        prevBtn.addEventListener('click', prevImage);
-        nextBtnImage.addEventListener('click', nextImage);
-        prevBtnImage.addEventListener('click', prevImage);
+        // Add click event to each card
+        cards.forEach(card => {
+            card.addEventListener('click', nextCard);
+        });
         
         // Initialize gallery
-        updateImage();
+        updateCard();
     }
 
     // --- Contact Form Validation ---
