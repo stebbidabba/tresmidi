@@ -418,7 +418,7 @@ cite {
 
 /* --- Workshop Gallery Section --- */
 .workshop-gallery-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -441,8 +441,8 @@ cite {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     position: relative;
-    min-height: 600px;
-    max-height: 800px;
+    min-height: 800px;
+    max-height: 1200px;
 }
 
 .gallery-image-container img {
@@ -451,7 +451,7 @@ cite {
     display: block;
     transition: transform 0.3s ease-in-out;
     object-fit: contain;
-    min-height: 600px;
+    min-height: 800px;
 }
 
 .gallery-image-container:hover img {
