@@ -443,7 +443,7 @@ cite {
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     position: relative;
     height: auto;
-    min-height: 800px;
+    min-height: 1500px;
     padding: 1rem;
 }
 
@@ -455,6 +455,7 @@ cite {
     object-fit: contain;
     max-width: 100%;
     visibility: visible !important;
+    max-height: none;
 }
 
 .gallery-image-container:hover img {
