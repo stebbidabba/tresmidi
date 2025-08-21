@@ -97,11 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentCardIndex = 0;
         
         const updateCard = () => {
-            // Remove active class from all cards
-            cards.forEach(card => card.classList.remove('active'));
-            
-            // Add active class to current card
-            cards[currentCardIndex].classList.add('active');
+            // Update all card positions and styles based on their new index
+            cards.forEach((card, index) => {
+                const adjustedIndex = (index - currentCardIndex + cards.length) % cards.length;
+                card.setAttribute('data-index', adjustedIndex);
+            });
             
             // Update counter
             cardCounter.textContent = `${currentCardIndex + 1} / ${cards.length}`;
