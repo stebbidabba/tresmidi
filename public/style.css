@@ -418,7 +418,7 @@ cite {
 
 /* --- Workshop Gallery Section --- */
 .workshop-gallery-section {
-    padding: 4rem 0;
+    padding: 6rem 0;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -430,7 +430,7 @@ cite {
 }
 
 .gallery-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -441,15 +441,17 @@ cite {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     position: relative;
-    max-height: 600px;
+    min-height: 600px;
+    max-height: 800px;
 }
 
 .gallery-image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: transform 0.3s ease-in-out;
     object-fit: contain;
+    min-height: 600px;
 }
 
 .gallery-image-container:hover img {
