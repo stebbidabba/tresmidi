@@ -863,6 +863,26 @@ address {
     font-size: 1.1rem;
 }
 
+.company-description {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.company-description h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.company-description p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
 /* --- Footer --- */
 .main-footer {
     background-color: var(--dark-blue-2);
