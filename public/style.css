@@ -436,13 +436,13 @@ cite {
 }
 
 .gallery-image-container {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     position: relative;
-    min-height: 800px;
-    max-height: 1200px;
+    min-height: 1000px;
+    max-height: 1500px;
 }
 
 .gallery-image-container img {
@@ -498,6 +498,26 @@ cite {
     color: var(--primary-blue);
     font-size: 1.1rem;
     min-width: 60px;
+}
+
+.workshop-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+    line-height: 1.6;
+}
+
+.workshop-description h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.workshop-description p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 /* On-image navigation buttons */
