@@ -1,0 +1,54 @@
+{
+    "font": "Poppins",
+    "colors": {
+      "primary": "#0055A4",
+      "secondary": "#ffffff",
+      "accent": "#FFDD00",
+      "text": "#333333",
+      "overlay": "rgba(0, 0, 0, 0.5)"
+    },
+    "layout": {
+      "header": {
+        "logo": "public/logo.jpg",
+        "nav": ["Heim", "Um Okkur", "Þjónusta", "Hafa Samband"],
+        "background": "#0055A4",
+        "textColor": "#ffffff"
+      },
+      "hero": {
+        "backgroundImage": "public/landsþs.jpg",
+        "overlayColor": "rgba(0, 0, 0, 0.4)",
+        "headline": "Sérsmíðaðar Lausnir úr Tré",
+        "subheadline": "Við hjá SÞS breytum hugmyndum í raunveruleika",
+        "buttonText": "Hafa Samband",
+        "buttonColor": "#FFDD00",
+        "textColor": "#ffffff"
+      },
+      "pages": {
+        "heim": {
+          "sections": ["hero", "servicesPreview", "cta"]
+        },
+        "umOkkur": {
+          "title": "Um Okkur",
+          "content": "SÞS Trésmíðaverkstæði sameinar áralanga reynslu, nákvæmni og ástríðu í hvert verk."
+        },
+        "þjónusta": {
+          "title": "Þjónusta",
+          "services": [
+            "Sérsmíðaðar hurðir",
+            "Stigar og handrið",
+            "Eldhús- og baðinnréttingar",
+            "Sérverkefni eftir pöntun"
+          ]
+        },
+        "hafaSamband": {
+          "email": "info@spsverkstaedi.is",
+          "phone": "+354 123 4567"
+        }
+      },
+      "footer": {
+        "backgroundColor": "#003D7A",
+        "text": "© 2025 SÞS Trésmíðaverkstæði – Öll réttindi áskilin"
+      }
+    }
+  }
+  
