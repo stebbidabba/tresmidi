@@ -503,25 +503,7 @@ cite {
     min-width: 60px;
 }
 
-.workshop-description {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2rem 0;
-    line-height: 1.6;
-}
 
-.workshop-description h3 {
-    color: var(--primary-blue);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.workshop-description p {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
 
 /* On-image navigation buttons */
 .gallery-image-nav {
