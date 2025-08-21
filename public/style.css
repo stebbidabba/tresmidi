@@ -418,10 +418,11 @@ cite {
 
 /* --- Workshop Gallery Section --- */
 .workshop-gallery-section {
-    padding: 8rem 0;
+    padding: 15rem 0;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    min-height: 2000px;
 }
 
 .workshop-gallery-section.visible {
@@ -442,6 +443,8 @@ cite {
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     position: relative;
     height: auto;
+    min-height: 1200px;
+    padding: 2rem;
 }
 
 .gallery-image-container img {
