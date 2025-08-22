@@ -521,6 +521,122 @@ cite {
     transform: translateY(0);
 }
 
+/* --- Touch Optimization & Mobile Workshop Gallery --- */
+/* Touch-friendly button sizes */
+@media (hover: none) and (pointer: coarse) {
+    .cta-button, .phone-button, .gallery-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hamburger {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* --- Mobile Workshop Gallery --- */
+@media (max-width: 768px) {
+    .workshop-gallery-section {
+        padding: 2rem 0;
+        min-height: 600px;
+    }
+    
+    .card-gallery-container {
+        margin: 2rem auto 0;
+        padding: 0 1rem;
+    }
+    
+    .card-stack {
+        height: 400px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        max-height: 300px;
+    }
+    
+    /* Adjust staggered effect for mobile */
+    .card[data-index="0"] {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    
+    .card[data-index="1"] {
+        transform: translateX(-50%) rotate(1deg);
+    }
+    
+    .card[data-index="2"] {
+        transform: translateX(-50%) rotate(2deg);
+    }
+    
+    .card[data-index="3"] {
+        transform: translateX(-50%) rotate(3deg);
+    }
+    
+    .card[data-index="4"] {
+        transform: translateX(-50%) rotate(4deg);
+    }
+    
+    .card[data-index="5"] {
+        transform: translateX(-50%) rotate(5deg);
+    }
+    
+    .card-counter {
+        font-size: 1.1rem;
+    }
+    
+    .card-instruction {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .workshop-gallery-section {
+        padding: 1.5rem 0;
+        min-height: 500px;
+    }
+    
+    .card-stack {
+        height: 350px;
+    }
+    
+    .card {
+        height: 250px;
+    }
+    
+    .card img {
+        max-height: 250px;
+    }
+    
+    .card-counter {
+        font-size: 1rem;
+    }
+    
+    .card-instruction {
+        font-size: 0.85rem;
+    }
+}
+
 
 
 
@@ -977,6 +1093,103 @@ address {
     transform: translateY(0);
 }
 
+/* --- Mobile-First Responsive Design --- */
+
+/* Extra Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-headline {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subheadline {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .page-title-section h1 {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .feature-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .feature-text p {
+        font-size: 0.95rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .phone-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .phone-numbers {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Small Mobile (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero-headline {
+        font-size: 2rem;
+    }
+    
+    .hero-subheadline {
+        font-size: 1.05rem;
+    }
+    
+    .page-title-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .phone-numbers {
+        gap: 1rem;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subheadline {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop (992px+) */
+@media (min-width: 992px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
 
 @media (max-width: 768px) {
     .nav-logo {
@@ -1023,6 +1236,33 @@ address {
         transform: translateY(-8px) rotate(-45deg);
     }
     
+    /* Mobile navigation improvements */
+    .nav-menu {
+        padding-top: 4rem;
+    }
+    
+    .nav-item {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-link:hover {
+        background-color: rgba(255,255,255,0.1);
+        padding-left: 1rem;
+        transition: all 0.3s ease;
+    }
+    
     .hero-headline {
         font-size: 2.2rem;
     }
@@ -1033,15 +1273,160 @@ address {
 
     .footer-grid {
         text-align: center;
+        gap: 2rem;
     }
     .footer-column {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     .social-links {
         justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* Mobile footer improvements */
+    .footer-section {
+        padding: 2rem 0;
+    }
+    
+    .footer-bottom {
+        padding: 1rem 0;
+        font-size: 0.8rem;
+    }
+    
+    /* Mobile general improvements */
+    .main-header {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-logo img {
+        height: 40px;
+        width: auto;
+    }
+    
+    .hamburger {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .bar {
+        height: 3px;
+        width: 25px;
+    }
+    
+    /* Mobile spacing improvements */
+    .content-section {
+        padding: 2rem 0;
+    }
+    
+    .alternate-bg {
+        padding: 2rem 0;
+    }
+    
+    .page-title-section {
+        padding: 2rem 0;
     }
 
     .service-grid {
         grid-template-columns: 1fr;
-  }
+        gap: 2rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .service-content p {
+        font-size: 0.95rem;
+    }
+    
+    .gallery-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .gallery-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    /* Contact form mobile optimization */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .contact-details-container {
+        padding: 1.5rem;
+    }
+    
+    .form-group input, .form-group textarea {
+        padding: 1rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .cta-button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Company description mobile */
+    .company-description {
+        padding: 1.5rem 1rem;
+        margin: 2rem auto 0;
+    }
+    
+    .company-description h3 {
+        font-size: 1.3rem;
+    }
+    
+    .company-description p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1rem;
+    }
+    
+    .service-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .service-content p {
+        font-size: 0.9rem;
+    }
+    
+    .gallery-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .contact-form-container, .contact-details-container {
+        padding: 1rem;
+    }
+    
+    .company-description {
+        padding: 1rem;
+        margin: 1.5rem auto 0;
+    }
+    
+    .company-description h3 {
+        font-size: 1.2rem;
+    }
+    
+    .company-description p {
+        font-size: 0.95rem;
+    }
+}
 } 
